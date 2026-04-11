@@ -1,13 +1,8 @@
 # Statistical Arbitrage in Cryptocurrencies
 ## Author
-
 Pharoah Evelyn
 
----
-
-**Goal:** Identify and exploit market inefficiencies in crypto markets using statistical arbitrage techniques — progressing from manual methods to ML-powered strategies.
-
----
+### **Goal:** Identify and exploit market inefficiencies in crypto markets using statistical arbitrage techniques — progressing from manual methods to ML-powered strategies.
 
 ## Overview
 
@@ -19,16 +14,12 @@ This project builds and compares three portfolio strategies on a universe of 14 
 | SKLearn (Ridge + CV) | — | 3.287 | 0.001 |
 | PyTorch LSTM | — | 4.671 | <0.001 |
 
----
-
 ## Data
 
 - **Source:** Binance API (`python-binance`)
 - **Universe:** ADA, AVAX, BNB, BTC, DASH, DOGE, ETH, HBAR, HYPE, LINK, SOL, SUI, XRP, ZEC
 - **Frequency:** 4-hour bars for signal research; resampled to daily for portfolio construction
 - **Date pinned** via `DATA_END` constant for reproducibility
-
----
 
 ## Dependencies
 
@@ -44,14 +35,11 @@ cvxpy
 torch
 ```
 
----
-
 ## Usage
 
 1. Add your Binance API credentials
 2. Run all cells top-to-bottom — `DATA_END` is pinned; results are fully reproducible
 3. Runtime logs are written to `runtime_logs/` on each run
----
 
 ## Notebook Sections
 
@@ -104,8 +92,6 @@ All three strategies are benchmarked OOS, vol-targeted to 10% annualized. Alpha 
 - **Manual** — most consistent, stable across runs, alpha not statistically significant (p ≈ 0.084)
 - **SKLearn** — highest peak cumulative return (~35%), regime-concentrated Oct–Dec 2025, significant alpha (p = 0.001)
 - **LSTM** — strongest upward trend and highest alpha t-stat (4.671), highly significant (p < 0.001)
-
----
 
 ## Key Design Decisions
 
