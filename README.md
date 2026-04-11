@@ -30,6 +30,29 @@ This project builds and compares three portfolio strategies on a universe of 14 
 
 ---
 
+## Dependencies
+
+```
+python-binance
+pandas
+numpy
+matplotlib
+seaborn
+statsmodels
+scikit-learn
+cvxpy
+torch
+```
+
+---
+
+## Usage
+
+1. Add your Binance API credentials
+2. Run all cells top-to-bottom — `DATA_END` is pinned; results are fully reproducible
+3. Runtime logs are written to `runtime_logs/` on each run
+---
+
 ## Notebook Sections
 
 ### Section 1 — Data Loading
@@ -91,26 +114,4 @@ All three strategies are benchmarked OOS, vol-targeted to 10% annualized. Alpha 
 - **Alpha significance tested via OLS t-stats** — `✓/✗` flags at |t| > 2.0 in the runtime log
 - **Runtime log** auto-generated each run as a timestamped HTML/markdown summary table
 
----
 
-## Dependencies
-
-```
-python-binance
-pandas
-numpy
-matplotlib
-seaborn
-statsmodels
-scikit-learn
-cvxpy
-torch
-```
-
----
-
-## Usage
-
-1. Add your Binance API credentials
-2. Run all cells top-to-bottom — `DATA_END` is pinned; results are fully reproducible
-3. Runtime logs are written to `runtime_logs/` on each run
