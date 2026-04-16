@@ -1,4 +1,6 @@
 # Statistical Arbitrage in Cryptocurrencies
+<img width="2560" height="1280" alt="image" src="https://github.com/user-attachments/assets/df4d2a66-13cf-41d5-8070-029e0ff6cb92" />
+
 ## Author
 Pharoah Evelyn
 
