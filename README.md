@@ -48,7 +48,8 @@ torch
 ### Section 1 — Data Loading
 Pulls OHLCV data from Binance, converts prices to log returns, and visualizes cumulative returns per coin.
 <img width="822" height="428" alt="image" src="https://github.com/user-attachments/assets/5ec909e2-c49f-4e3e-94d4-329acbd09345" />
-Data is pulled in 4h time bars for research
+
+Data is pulled in 4h time bars for research.
 
 ### Section 2 — Data Investigation
 - **Drawdown analysis** — max drawdowns range from –65% to –97% across coins <img width="790" height="490" alt="image" src="https://github.com/user-attachments/assets/49efdc82-b180-4f9a-95f3-c7e9edea0fa3" />
@@ -89,7 +90,7 @@ Four signal families across two strategy types:
 - *Basket Reversal:* Each coin regressed against the full basket; residuals traded as mean-reversion signals. AVAX leads; HYPE is weakest. <img width="989" height="490" alt="image" src="https://github.com/user-attachments/assets/2d97ee69-3be4-430c-8723-ae4f4f5aaa96" />
 
 ### Section 4 — Weighting & Performance Evaluation
-#### Data was resampled for daily bars for signal generation.
+### Data was resampled for daily bars for signal generation.
 TS and XS signals are each combined under three schemes — Optimal Weights, Equal-Vol Weights, and SR Weights — using a 70/30 train/test split to prevent lookahead bias. SR Weights are selected for the TS leg.
 
 ### Section 5 — Backtesting & Portfolio Construction
