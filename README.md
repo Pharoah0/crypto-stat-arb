@@ -10,9 +10,9 @@ This project builds and compares three portfolio strategies on a universe of 14 
 
 | Approach | OOS Sharpe | Alpha T-Stat | P-value |
 |---|---|---|---|
-| Manual | ~2.0–2.28 | 1.736 | 0.084 |
-| SKLearn (Ridge + CV) | — | 3.287 | 0.001 |
-| PyTorch LSTM | — | 4.671 | <0.001 |
+| Manual | ~1.94–2.28 | 1.736 | 0.084 |
+| SKLearn (Ridge + CV) | ~3.63-5.36 | 3.287 | 0.001 |
+| PyTorch LSTM | ~2.70-3.43 | 4.671 | <0.001 |
 
 ## Data
 
@@ -45,6 +45,7 @@ torch
 
 ### Section 1 — Data Loading
 Pulls OHLCV data from Binance, converts prices to log returns, and visualizes cumulative returns per coin.
+![Alt text](images/1 - raw cumulative returns.png)
 
 ### Section 2 — Data Investigation
 - **Drawdown analysis** — max drawdowns range from –65% to –97% across coins
