@@ -49,21 +49,41 @@ Pulls OHLCV data from Binance, converts prices to log returns, and visualizes cu
 
 
 ### Section 2 — Data Investigation
-- **Drawdown analysis** — max drawdowns range from –65% to –97% across coins
-- **Rolling Beta & Alpha** vs. BTC — XRP, DASH, and ZEC show β < 1 with meaningful α
-- **Pairwise correlations** — raw vs. alpha-return heatmaps; alpha returns are far less correlated, creating diversification opportunities
+- **Drawdown analysis** — max drawdowns range from –65% to –97% across coins <img width="790" height="490" alt="image" src="https://github.com/user-attachments/assets/49efdc82-b180-4f9a-95f3-c7e9edea0fa3" />
+
+- **Rolling Beta & Alpha** vs. BTC — XRP, DASH, and ZEC show β < 1 with meaningful α <img width="790" height="490" alt="image" src="https://github.com/user-attachments/assets/112eeae2-ad6b-47d2-865b-e12f4248035c" />
+
+- **Pairwise correlations** — raw vs. alpha-return heatmaps; alpha returns are far less correlated, creating diversification opportunities <img width="542" height="460" alt="image" src="https://github.com/user-attachments/assets/0b1262b5-f60b-4e8d-81a1-e1cb962d50a4" /> <img width="542" height="460" alt="image" src="https://github.com/user-attachments/assets/c7ab628d-ef13-45ec-b263-60a2d4a0840a" />
+
 - **Sharpe vs. Information Ratio** — HYPE stands out after removing BTC's market influence
+| coin | sharpe ratio | information ratio |
+|---|---|---|
+| HYPE	0.304	0.652 |
+| SOL | 0.455 | 0.387 |
+| BNB | 0.437 | 0.366 |
+| DOGE | 0.421 | 0.331 |
+| ZEC | 0.294 | 0.303 |
+| DASH | 0.281 | 0.297 |
+| ETH | 0.347 | 0.196 |
+| ADA | 0.325 | 0.168 |
+| XRP | 0.256 | 0.148 |
+| SUI | 0.348 | 0.140 |
+| HBAR | 0.292 | 0.131 |
+| LINK | 0.074 | 0.046 |
+| USDC | 0.022 | -0.013 |
+| AVAX | -0.017 | -0.202 |
+| BTC | 0.328 | NaN |
 
 ### Section 3 — Signal Generation
 Four signal families across two strategy types:
 
 **Time-Series (TS) Momentum**
-- *Time Horizon:* Rolling mean signals across 10 daily horizons (1–30d). Short-term momentum is negative; edge improves at longer horizons. 28d peaks.
-- *Seasonality:* Weekday vs. weekend returns; hour-of-day analysis (US/EU sessions outperform); monthly seasonality (Jan, Jul, Nov strongest).
+- *Time Horizon:* Rolling mean signals across 10 daily horizons (1–30d). Short-term momentum is negative; edge improves at longer horizons. 28d peaks. <img width="989" height="490" alt="image" src="https://github.com/user-attachments/assets/eabc0fd6-1376-46c0-842c-86f96f0ae655" />
+- *Seasonality:* Weekday vs. weekend returns; hour-of-day analysis (US/EU sessions outperform); monthly seasonality (Jan, Jul, Nov strongest).<img width="989" height="490" alt="image" src="https://github.com/user-attachments/assets/b992150a-6505-479c-9570-5d47a63df836" /> <img width="989" height="490" alt="image" src="https://github.com/user-attachments/assets/d0062a12-51c0-464c-9f85-9ed7cb6c0665" />
 
 **Cross-Sectional (XS) Reversal**
-- *Pairs Reversal:* Correlated coin pairs (ρ > 0.7) traded as mean-reversion pairs. Best performer: ETH/ZEC (Sharpe > 5.0).
-- *Basket Reversal:* Each coin regressed against the full basket; residuals traded as mean-reversion signals. AVAX leads; HYPE is weakest.
+- *Pairs Reversal:* Correlated coin pairs (ρ > 0.7) traded as mean-reversion pairs. Best performer: ETH/ZEC (Sharpe > 5.0). <img width="988" height="489" alt="image" src="https://github.com/user-attachments/assets/cd824379-9e11-458d-8e34-3b906ac20d93" />
+- *Basket Reversal:* Each coin regressed against the full basket; residuals traded as mean-reversion signals. AVAX leads; HYPE is weakest. <img width="989" height="490" alt="image" src="https://github.com/user-attachments/assets/2d97ee69-3be4-430c-8723-ae4f4f5aaa96" />
 
 ### Section 4 — Weighting & Performance Evaluation
 TS and XS signals are each combined under three schemes — Optimal Weights, Equal-Vol Weights, and SR Weights — using a 70/30 train/test split to prevent lookahead bias. SR Weights are selected for the TS leg.
@@ -90,7 +110,7 @@ An LSTM network generates per-coin position signals directly from market feature
 - Model weights saved via `torch.save`
 
 ### Section 9 — Final Comparison: Manual vs. SKLearn vs. PyTorch
-All three strategies are benchmarked OOS, vol-targeted to 10% annualized. Alpha t-stats are computed against BTC using `statsmodels OLS`:
+All three strategies are benchmarked OOS, vol-targeted to 10% annualized. Alpha t-stats are computed against BTC using `statsmodels OLS`: <img width="1181" height="584" alt="image" src="https://github.com/user-attachments/assets/9067a945-82f5-4728-944c-59f52f1f9d1a" />
 - **Manual** — most consistent, stable across runs, alpha not statistically significant (p ≈ 0.084)
 - **SKLearn** — highest peak cumulative return (~35%), regime-concentrated Oct–Dec 2025, significant alpha (p = 0.001)
 - **LSTM** — strongest upward trend and highest alpha t-stat (4.671), highly significant (p < 0.001)
