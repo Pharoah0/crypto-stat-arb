@@ -45,7 +45,8 @@ torch
 
 ### Section 1 — Data Loading
 Pulls OHLCV data from Binance, converts prices to log returns, and visualizes cumulative returns per coin.
-![Alt text](images/1 - raw cumulative returns.png)
+<img width="822" height="428" alt="image" src="https://github.com/user-attachments/assets/5ec909e2-c49f-4e3e-94d4-329acbd09345" />
+
 
 ### Section 2 — Data Investigation
 - **Drawdown analysis** — max drawdowns range from –65% to –97% across coins
