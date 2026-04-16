@@ -56,7 +56,8 @@ Data is pulled in 4h time bars for research.
 
 - **Rolling Beta & Alpha** vs. BTC — XRP, DASH, and ZEC show β < 1 with meaningful α <img width="790" height="490" alt="image" src="https://github.com/user-attachments/assets/112eeae2-ad6b-47d2-865b-e12f4248035c" />
 
-- **Pairwise correlations** — raw vs. alpha-return heatmaps; alpha returns are far less correlated, creating diversification opportunities <img width="542" height="460" alt="image" src="https://github.com/user-attachments/assets/0b1262b5-f60b-4e8d-81a1-e1cb962d50a4" /> <img width="542" height="460" alt="image" src="https://github.com/user-attachments/assets/c7ab628d-ef13-45ec-b263-60a2d4a0840a" />
+- **Pairwise correlations** — raw vs. alpha-return heatmaps; alpha returns are far less correlated, creating diversification opportunities <img width="542" height="460" alt="image" src="https://github.com/user-attachments/assets/0b1262b5-f60b-4e8d-81a1-e1cb962d50a4" /> <img width="542" height="460" alt="image" src="https://github.com/user-attachments/assets/6e368b44-5c9a-4619-933b-193b1324ac18" />
+
 
 - **Sharpe vs. Information Ratio** — HYPE stands out after removing BTC's market influence
 
