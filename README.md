@@ -59,7 +59,7 @@ Pulls OHLCV data from Binance, converts prices to log returns, and visualizes cu
 
 | coin | sharpe ratio | information ratio |
 |---|---|---|
-| HYPE	0.304	0.652 |
+| HYPE | 0.304 | 0.652 |
 | SOL | 0.455 | 0.387 |
 | BNB | 0.437 | 0.366 |
 | DOGE | 0.421 | 0.331 |
