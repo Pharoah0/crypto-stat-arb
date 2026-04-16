@@ -56,6 +56,7 @@ Pulls OHLCV data from Binance, converts prices to log returns, and visualizes cu
 - **Pairwise correlations** — raw vs. alpha-return heatmaps; alpha returns are far less correlated, creating diversification opportunities <img width="542" height="460" alt="image" src="https://github.com/user-attachments/assets/0b1262b5-f60b-4e8d-81a1-e1cb962d50a4" /> <img width="542" height="460" alt="image" src="https://github.com/user-attachments/assets/c7ab628d-ef13-45ec-b263-60a2d4a0840a" />
 
 - **Sharpe vs. Information Ratio** — HYPE stands out after removing BTC's market influence
+
 | coin | sharpe ratio | information ratio |
 |---|---|---|
 | HYPE	0.304	0.652 |
